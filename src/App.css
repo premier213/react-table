@@ -1,38 +1,35 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+table {
+  @apply border-none
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+tbody {
+  @apply border-b-2 border-slate-200
+}
+tbody>tr{
+  @apply border-b border-slate-200 h-16
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+th {
+  @apply border-b-2 border-slate-200 py-4 pr-4
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+
+tfoot {
+  color: gray;
 }
 
-.App-link {
-  color: #61dafb;
+tfoot th {
+  font-weight: normal;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.headerTitle {
+  @apply text-xs font-medium text-slate-500 float-left
+}
+.tableTr {
+  @apply py-4 border-b border-slate-200
 }
